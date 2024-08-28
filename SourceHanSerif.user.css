@@ -1,0 +1,517 @@
+/* ==UserStyle==
+@name SourceHanSerif
+@namespace SourceHanSerif
+@version 2024-08-28
+@preprocessor less
+==/UserStyle== */
+
+/* ---------------------------------------------------------------------- */
+@EmojiFamily: "_Twemoji_Mozilla",
+    "_SegoeUIEmoji",
+    "Apple Color Emoji",;
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+@Sans: "Source Han Serif SC VF";
+@Mono: "思源等宽";
+/* ---------------------------------------------------------------------- */
+@AsianTextFont_Sans: @Sans;
+@SourceHanSans_JP: @AsianTextFont_Sans;
+@SourceHanSans_TC: @Sans;
+@SourceHanSans_SC: @Sans;
+
+/* ---------------------------------------------------------------------- */
+@AsianTextFont_Sans_JP: @SourceHanSans_JP,
+    @SourceHanSans_TC,
+    @SourceHanSans_SC;
+@Body_Sans_JP: @Sans,
+    @AsianTextFont_Sans_JP;
+@Body_Mono_JP: @Mono,
+    @AsianTextFont_Sans_JP;
+/* ---------------------------------------------------------------------- */
+@AsianTextFont_Sans_SC: @SourceHanSans_SC,
+    @SourceHanSans_JP,
+    @SourceHanSans_TC;
+@Body_Sans_SC: @Sans,
+    @AsianTextFont_Sans_SC;
+@Body_Mono_SC: @Mono,
+    @AsianTextFont_Sans_SC;
+/* ---------------------------------------------------------------------- */
+@AsianTextFont_Sans_TC: @SourceHanSans_TC,
+    @SourceHanSans_JP,
+    @SourceHanSans_SC;
+@Body_Sans_TC: @Sans,
+    @AsianTextFont_Sans_TC;
+@Body_Mono_TC: @Mono,
+    @AsianTextFont_Sans_TC;
+/* ---------------------------------------------------------------------- */
+@Serif: "Source Han Serif SC VF";
+@AsianTextFont_Serif: "Source Han Serif HC VF";
+@AsianTextFont_Serif_JP: "Source Han Serif VF";
+@Body_Serif: @Serif,
+    @AsianTextFont_Serif;
+@Body_Serif_JP: @Serif,
+    @AsianTextFont_Serif_JP,
+    @AsianTextFont_Serif;
+
+@FallBackSans: "微软雅黑";
+@FallBackMono: "思源等宽";
+@FallBackMono_JP: "思源等宽";
+
+@EmojiUnicodeRange: U+1F300-1F5FF,
+    /* Miscellaneous Symbols and Pictographs */
+    U+1F600-1F64F,
+    /* Emoticons */
+    U+1F680-1F6FF,
+    /* Transport and Map Symbols */
+    U+1F700-1F77F,
+    /* Alchemical Symbols */
+    U+1F780-1F7FF,
+    /* Geometric Shapes Extended */
+    U+1F800-1F8FF,
+    /* Supplemental Arrows-C */
+    U+1F900-1F9FF,
+    /* Supplemental Symbols and Pictographs */
+    U+1FA00-1FA6F,
+    /* Chess Symbols */
+    U+1FA70-1FAFF,
+    /* Symbols and Pictographs Extended-A */
+    U+2600-26FF,
+    /* Miscellaneous Symbols */
+    U+2700-27BF,
+    /* Dingbats */
+    U+FE00-FE0F,
+    /* Variation Selectors */
+    U+1F1E6-1F1FF,
+    /* Regional Indicator Symbols */
+    U+1F191-1F251;
+/* Enclosed Ideographic Supplement */
+
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+
+.file-info,
+.blob-code-inner,
+.text-mono,
+.encodings td,
+.code.line,
+.CodeMirror,
+.bilibili-player-video-info-container,
+.web-player-video-info-panel {
+  font-family: @EmojiFamily, @Body_Mono_SC, @FallBackSans, monospace;
+}
+
+html {
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+keygen,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+}
+
+body,
+*[lang="en"],
+*[lang="zh"],
+*[lang="zh-CN"],
+*[lang="zh-SG"],
+*[lang="cmn-Hans"],
+*[lang="zh-cmn-Hans"],
+*[lang="zh-Hans"] {
+  font-family: @EmojiFamily, @Body_Sans_SC, @FallBackSans, sans-serif;
+  quotes: "「" "」";
+}
+
+code,
+kbd,
+pre,
+*[lang="zh"] code,
+*[lang="zh"] kbd,
+*[lang="zh"] pre,
+*[lang="zh"] samp,
+*[lang="zh-CN"] code,
+*[lang="zh-CN"] kbd,
+*[lang="zh-CN"] pre,
+*[lang="zh-CN"] samp,
+*[lang="zh-SG"] code,
+*[lang="zh-SG"] kbd,
+*[lang="zh-SG"] pre,
+*[lang="zh-SG"] samp,
+*[lang="cmn-Hans"] code,
+*[lang="cmn-Hans"] kbd,
+*[lang="cmn-Hans"] pre,
+*[lang="cmn-Hans"] samp,
+*[lang="zh-cmn-Hans"] code,
+*[lang="zh-cmn-Hans"] kbd,
+*[lang="zh-cmn-Hans"] pre,
+*[lang="zh-cmn-Hans"] samp,
+*[lang="zh-Hans"] code,
+*[lang="zh-Hans"] kbd,
+*[lang="zh-Hans"] pre,
+*[lang="zh-Hans"] samp {
+  font-family: @EmojiFamily, @Body_Mono_SC, @FallBackMono, monospace;
+}
+
+*[lang="zh-TW"],
+*[lang="cmn-Hant"],
+*[lang="zh-cmn-Hant"],
+*[lang="zh-Hant"] {
+  font-family: @EmojiFamily, @Body_Sans_TC, @FallBackSans, sans-serif;
+  quotes: "「" "」";
+}
+
+*[lang="zh-TW"] code,
+*[lang="zh-TW"] kbd,
+*[lang="zh-TW"] pre,
+*[lang="zh-TW"] samp,
+*[lang="cmn-Hant"] code,
+*[lang="cmn-Hant"] kbd,
+*[lang="cmn-Hant"] pre,
+*[lang="cmn-Hant"] samp,
+*[lang="zh-cmn-Hant"] code,
+*[lang="zh-cmn-Hant"] kbd,
+*[lang="zh-cmn-Hant"] pre,
+*[lang="zh-cmn-Hant"] samp,
+*[lang="zh-Hant"] code,
+*[lang="zh-Hant"] kbd,
+*[lang="zh-Hant"] pre,
+*[lang="zh-Hant"] samp {
+  font-family: @EmojiFamily, @Body_Mono_TC, @FallBackMono, monospace;
+}
+
+*[lang="zh-Hant"],
+*[lang="zh-HK"],
+*[lang="zh-MO"],
+*[lang="yue"],
+*[lang="yue-Hant"],
+*[lang="zh-yue-Hant"] {
+  font-family: @EmojiFamily, @Body_Sans_TC, @FallBackSans, sans-serif;
+  quotes: "「" "」";
+}
+
+*[lang="zh-Hant"] code,
+*[lang="zh-Hant"] kbd,
+*[lang="zh-Hant"] pre,
+*[lang="zh-Hant"] samp,
+*[lang="zh-HK"] code,
+*[lang="zh-HK"] kbd,
+*[lang="zh-HK"] pre,
+*[lang="zh-HK"] samp,
+*[lang="zh-MO"] code,
+*[lang="zh-MO"] kbd,
+*[lang="zh-MO"] pre,
+*[lang="zh-MO"] samp,
+*[lang="yue-Hant"] code,
+*[lang="yue-Hant"] kbd,
+*[lang="yue-Hant"] pre,
+*[lang="yue-Hant"] samp,
+*[lang="yue"] samp,
+*[lang="yue"] code,
+*[lang="yue"] kbd,
+*[lang="yue"] pre,
+*[lang="zh-yue-Hant"] code,
+*[lang="zh-yue-Hant"] kbd,
+*[lang="zh-yue-Hant"] pre,
+*[lang="zh-yue-Hant"] samp {
+  font-family: @EmojiFamily, @Body_Mono_TC, @FallBackSans, monospace;
+}
+
+*[lang="ja"] {
+  font-family: @EmojiFamily, @Body_Sans_JP, @FallBackSans, sans-serif;
+  quotes: "「" "」";
+}
+
+*[lang="ja"] code,
+*[lang="ja"] kbd,
+*[lang="ja"] pre,
+*[lang="ja"] samp {
+  font-family: @EmojiFamily, @Body_Mono_JP, @FallBackMono_JP, monospace;
+}
+
+*[lang="ko"] {
+  font-family: @EmojiFamily, @Body_Sans_SC, @FallBackSans, sans-serif;
+}
+
+*[lang="ko"] code,
+*[lang="ko"] kbd,
+*[lang="ko"] pre,
+*[lang="ko"] samp {
+  font-family: @EmojiFamily, @Body_Mono_SC, @FallBackMono, monospace;
+}
+
+@font-face {
+  font-family: "_SegoeUIEmoji";
+  src: local("Segoe UI Emoji");
+  unicode-range: @EmojiUnicodeRange;
+}
+
+@font-face {
+  font-family: "_Twemoji_Mozilla";
+  src: local("Twemoji Mozilla");
+  unicode-range: @EmojiUnicodeRange;
+}
+
+@font-face {
+  font-family: "Linux Libertine";
+  src: local(@Serif);
+}
+
+@font-face {
+  font-family: "Georgia";
+  src: local(@Serif);
+}
+
+@font-face {
+  font-family: "Times";
+  src: local(@Serif);
+}
+
+@font-face {
+  font-family: "Time New Roman";
+  src: local(@Serif);
+}
+
+@font-face {
+  font-family: "Arial";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Oxygen";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Helvetica Now";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Tahoma";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Trebuchet";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Trebuchet MS";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Verdana";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: monospace;
+  src: local(@Mono);
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src: local(@Mono);
+}
+
+@font-face {
+  font-family: ui-monospace;
+  src: local(@Mono);
+}
+
+@font-face {
+  font-family: "SFMono-Regular";
+  src: local(@Mono);
+}
+
+@font-face {
+  font-family: "Consolas";
+  src: local(@Mono);
+}
+
+@font-face {
+  font-family: "Courier";
+  src: local(@Mono);
+}
+
+@font-face {
+  font-family: "Courier New";
+  src: local(@Mono);
+}
+
+@font-face {
+  font-family: "Lucida Console";
+  src: local(@Mono);
+}
+
+@font-face {
+  font-family: "Ubuntu Mono";
+  src: local(@Mono);
+}
+
+@font-face {
+  font-family: "SimSun";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "SimSun-ExtB";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "宋体";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "NSimSun";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "新宋体";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "SimHei";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "黑体";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Microsoft YaHei UI";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "Microsoft YaHei";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "微软雅黑";
+  src: local(@Sans);
+}
+
+@font-face {
+  font-family: "MingLiU";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "MingLiU-ExtB";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "PMingLiU";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "PMingLiU-ExtB";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "Microsoft JhengHei UI";
+  src: local(@AsianTextFont_Sans);
+}
+
+@font-face {
+  font-family: "Microsoft JhengHei";
+  src: local(@AsianTextFont_Sans);
+}
+
+@font-face {
+  font-family: "微軟正黑體";
+  src: local(@AsianTextFont_Sans);
+}
+
+@font-face {
+  font-family: "STHeiti TC";
+  src: local(@AsianTextFont_Sans);
+}
+
+@font-face {
+  font-family: "MingLiU_HKSCS";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "MingLiU_HKSCS-ExtB";
+  src: local(@AsianTextFont_Serif);
+}
+
+@font-face {
+  font-family: "MS Gothic";
+  src: local(@AsianTextFont_Sans);
+}
+
+@font-face {
+  font-family: "MS PGothic";
+  src: local(@AsianTextFont_Sans);
+}
+
+@font-face {
+  font-family: "MS UI Gothic";
+  src: local(@AsianTextFont_Sans);
+}
+
+@font-face {
+  font-family: "Yu Gothic";
+  src: local(@AsianTextFont_Sans);
+}
+
+@font-face {
+  font-family: "Yu Gothic UI";
+  src: local(@AsianTextFont_Sans);
+}
+
+@font-face {
+  font-family: "Meiryo";
+  src: local(@AsianTextFont_Sans);
+}
